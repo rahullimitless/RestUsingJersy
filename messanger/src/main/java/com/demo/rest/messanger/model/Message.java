@@ -9,6 +9,10 @@ import java.util.Map;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
+/**
+ * @author Rahul
+ *
+ */
 @XmlRootElement
 public class Message {
 	

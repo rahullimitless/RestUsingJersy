@@ -19,15 +19,7 @@ public MessageService() {
 	messages.put(2l,new Message(2,"Hello jersey","Saurabh"));
 }
 
-	/*public List<Message> getAllMessages()
-	{
-		List<Message> list=new ArrayList<Message>();
-		Message m1=new Message(1l,"Hello World","koushik");
-		Message m2=new Message(2l,"Hello Jersey","koushik");
-		list.add(m1);
-		list.add(m2);
-		return list;
-	}*/
+	
 
 	public List<Message> getAllMessages()
 	{

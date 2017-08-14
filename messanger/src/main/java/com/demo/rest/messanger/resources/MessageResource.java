@@ -29,6 +29,12 @@ public class MessageResource {
 	
 	MessageService messageService=new MessageService();
 	
+	//Return All the messages
+	@GET
+	public List<Message> getAllMessages(){
+		return messageService.getAllMessages();
+	}
+	
 	//@Query Param example
 	/*@GET
 	public List<Message> getMessages(@QueryParam("year") int year,@QueryParam("start") int start,@QueryParam("size") int size){
@@ -43,7 +49,7 @@ public class MessageResource {
 		return messageService.getAllMessages();
 	}*/
 	
-	@GET
+	/*@GET
 	public List<Message> getMessages(@BeanParam MessageFilterBean filterBean){
 		if(filterBean.getYear()>0)
 		{
@@ -54,13 +60,6 @@ public class MessageResource {
 			return messageService.getAllMessagesPaginated(filterBean.getStart(),filterBean.getSize());
 		}
 		return messageService.getAllMessages();
-	}
-	// simple get request
-	/*@GET
-	@Path("/{messageId}")
-	public Message getMessage(@PathParam("messageId") long id)
-	{
-		return messageService.getMessage(id);
 	}*/
 	
 	//send links with json respones HATEOAS
@@ -74,11 +73,7 @@ public class MessageResource {
 		return message;
 	}
 	
-	// Simple post Request
-	/*@POST
-	public Message addMessage(Message message){
-		return messageService.addMessage(message);
-	}*/
+	
 	
 	//post request with status code and location header
 	
